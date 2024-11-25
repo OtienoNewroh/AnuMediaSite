@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Link to favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="#"><img src="images/logo.png" alt="Logo"></a>
+            </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="graphics.html">Graphics</a></li>
+                <li><a href="film.html">Film</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <!-- Add more <li> elements for additional menu items -->
+            </ul>
+        </nav>
+    </header>
+    <div class="contact-content">
+        <h1>Contact Us</h1>
+        <p>We would love to hear from you! Please fill out the form below and we will get in touch with you as soon as possible.</p>
+        
+        <form action="contactdb.php" method="post" class="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="event-location">Event Location:</label>
+                <input type="text" id="event-location" name="event-location" required>
+            </div>
+        
+            <!-- Grouped fields for event type and date -->
+            <div class="form-group form-group-inline">
+                <div class="form-group">
+                    <label for="event-type">Type of Event:</label>
+                    <select id="event-type" name="event-type" required>
+                        <option value="" disabled selected>Select an event type</option>
+                        <option value="wedding">Wedding</option>
+                        <option value="corporate">Corporate</option>
+                        <option value="birthday">Birthday</option>
+                        <option value="anniversary">Anniversary</option>
+                        <option value="conference">Conference</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="event-date">Event Date:</label>
+                    <input type="date" id="event-date" name="event-date" required>
+                </div>
+            </div>
+        
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>    
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>Welcome to Anu Media Designs, where creativity meets craftsmanship. 
+                    We are a passionate team of professionals dedicated to capturing your stories through photography, videography, and graphic design. 
+                    Our mission is to transform your vision into stunning visuals that resonate and inspire.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Useful Links</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="graphics.html">Graphics</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="film.html">Film</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contact Us</h2>
+                <p>Address: Kahawa Wendani, Nairobi, Kenya</p>
+                <p>Phone: +254 53357955</p>
+                <p>Email: anumediadesigns@gmail.com</p>
+            </div>
+            <div class="footer-section social">
+                <h2>Follow Us</h2>
+                <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Anu Media Designs | Designed by Anu Media
+        </div>
+    </footer>
+    
+    <!-- Other content of your webpage -->
+    <script src="script.js"></script>   
+</body>
+</html>

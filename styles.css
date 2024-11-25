@@ -1,0 +1,363 @@
+/* Reset default styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    margin-top: 80px;
+    padding: 0;
+    background-color: #f4f4f4; /* Example background color */
+    padding-top: 20px;
+}
+
+/* Initial Header Style */
+header {
+    background-color: #88706c; /* Dark background color for the header */
+    padding: 30px 0; /* Larger padding for the initial header */
+    position: fixed; /* Fixes the header to the top */
+    top: 0; /* Aligns it to the top of the page */
+    left: 0; /* Aligns it to the left */
+    right: 0; /* Aligns it to the right */
+    width: 100%; /* Ensures the header spans the full width of the viewport */
+    z-index: 10000; /* Makes sure the header stays above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a slight shadow */
+    transition: padding 0.3s ease; /* Smooth transition for shrinking effect */
+}
+
+
+
+/* Shrunk Header Style */
+header.shrink {
+    padding: 10px 0; /* Smaller padding for the shrunk header */
+}
+
+/* Adjust content below header */
+.content, .homepage-sections, footer {
+    transition: margin-top 0.3s ease; /* Smooth transition for margin adjustment */
+}
+
+
+.header-container {
+    display: flex; /* Use flexbox for layout */ 
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space out the logo and nav */
+    max-width: 1200px; /* Maximum width of the header */
+    margin: 0 auto; /* Center-align the header */
+    padding: 0 20px; /* Padding on the sides */
+}
+
+.logo {
+    flex: 0 0 auto; /* Prevent logo from stretching */
+}
+
+.logo img {
+    height: 50px; /* Adjust height as needed */
+}
+
+nav {
+    flex: 1; /* Allow nav to take remaining space */
+    text-align: center; /* Center-align text within nav */
+    position: sticky;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block; /* Make the menu centered */
+}
+
+nav ul li {
+    display: inline-block; /* Display the list items horizontally */
+    margin-right: 15px; /* Add some space between the menu items */
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Remove margin from the last menu item */
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff; /* White color for the menu item text */
+}
+nav ul li a:hover,
+nav ul li a.active {
+    background: #8c8b8b;
+
+}
+
+.content {
+    margin: 0 auto; /* Center-align the content */
+    width: 80%; /* 80% width of the viewport */
+    max-width: 1200px; /* Maximum width of the content */
+    padding: 2px; /* Add padding inside the content area */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+    background-color: #e5e7ef; /* Example background color for content */
+    padding-top: 90px; /* Ensure content starts below the header (adjust based on header height) */
+    transition: padding-top 0.3s ease; /* Smooth transition for padding adjustment */
+}
+
+
+.content img {
+    width: 100%; /* Adjust width as needed */
+    display: block; /* Ensures proper spacing */
+    margin: 0 auto; /* Centers the image */
+}
+
+/* Container for the sections to be divided */
+.homepage-sections {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between the two sections */
+    padding: 10px; /* Padding around the container */
+    gap: 10px; /* Space between the two sections */
+}
+
+/* Styles for the left section */
+.left-section {
+    flex: 1; /* Takes up 1 part of the available space */
+    padding: 10px; /* Padding inside each section */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a slight 3D effect */
+    background-color: #f4f4f4; /* Background color for each section */
+    border-radius: 5px; /* Rounded corners for each section */
+}
+
+/* Styles for the right section */
+.right-section {
+    flex: 1.9; /* Takes up 1.5 parts of the available space, making it larger */
+    padding: 10px; /* Padding inside each section */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a slight 3D effect */
+    background-color: #f4f4f4; /* Background color for each section */
+    border-radius: 5px; /* Rounded corners for each section */
+}
+
+/* Ensure the sections stack on smaller screens */
+@media (max-width: 768px) {
+    .homepage-sections {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+    }
+}
+
+
+
+.about-content {
+    margin: 0 auto; /* Center-align the content */
+    width: 80%; /* 80% width of the viewport */
+    max-width: 1200px; /* Maximum width of the content */
+    padding: 2px; /* Add padding inside the content area */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+    background-color: #f4f4f4; /* Example background color for content */
+
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-section h2 {
+    margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a:hover {
+    color: #fff;
+}
+
+.footer-section.social a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer-section.social img {
+    width: 32px;
+    height: 32px;
+}
+
+.footer-bottom {
+    background: #222;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+}
+
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping of items onto the next line */
+    gap: 10px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+    
+}
+
+.photo-item {
+    flex: 1 1 calc(50% - 10px); /* Each item takes up half the width minus the gap */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.photo-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.photo-item .description {
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Contact Page Styles */
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-content h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-content p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: medium;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none; /* Remove default border */
+    border-bottom: 2px solid #ccc; /* Add a line below */
+    border-radius: 0; /* Remove rounded corners */
+    box-sizing: border-box;
+    background: none; /* Remove background to enhance the line effect */
+}
+
+.form-group select {
+    -webkit-appearance: none; /* Remove default dropdown styling in WebKit browsers */
+    -moz-appearance: none; /* Remove default dropdown styling in Mozilla browsers */
+    appearance: none; /* Remove default dropdown styling in all browsers */
+}
+
+.form-group-inline {
+    display: flex;
+    justify-content: space-between; /* Space out the fields evenly */
+    gap: 20px; /* Optional: Add space between the fields */
+}
+
+.form-group-inline .form-group {
+    flex: 1; /* Make both fields the same width */
+}
+
+.form-group button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #0c5c3a;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-group button:hover {
+    background-color: #097a50;
+}
+
+
+
+.film-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.film-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+}
+
+.film-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.film-item p {
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #333;
+}
